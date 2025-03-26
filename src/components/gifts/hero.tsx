@@ -86,7 +86,7 @@ const GiftsHero: FC = () => {
             Click any of the gifts below to claim them.
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: { xs: 3, sm: 5, md: 5 } }}>
-            <Link href="/" passHref>
+            <Link href="/" passHref legacyBehavior>
               <a>
                 <StyledButton color="dark" size={matchMobileView ? 'xlarge' : 'xlarge'}>
                   Go Back

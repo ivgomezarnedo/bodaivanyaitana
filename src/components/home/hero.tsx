@@ -92,7 +92,7 @@ const HomeHero: FC = () => {
               </StyledButton>
             </Box>
             <Box sx={{ mb: 4 }}>
-              <Link href="gifts" passHref>
+              <Link href="gifts" passHref legacyBehavior>
                 <a>
                   <StyledButton color="primary" size="large">
                     Register for a Gift

@@ -10,10 +10,10 @@ const weddingConfig: WeddingConfigType = {
         time: '16:30' // Optional
     },
     location: {
-        title: 'Teahouse in Stanley Park',
-        address: '7501 Stanley Park Dr, Vancouver, BC V6G 1Z4',
-        link: 'https://www.vancouverdine.com/teahouse/',
-        latLng: '49.3016707,-123.1597673'
+        title: 'Bodega Viñedos Ruiz Jiménez',
+        address: 'Carretera Comarcal, LR-115, Km 43, 5, 26559 Aldeanueva de Ebro, La Rioja',
+        link: 'https://maps.app.goo.gl/KQtCr3DVonad7y72A',
+        latLng: '42.2228946, -1.9030969'
     }
 }
 
