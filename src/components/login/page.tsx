@@ -9,7 +9,7 @@ const LoginPage: FC = () => {
       <Box sx={{ position: 'relative', height: '100vh', overflow: 'hidden', opacity: 0.9 }}>
         <Box>
           <Image
-            src={'/images/banners/home-hero.webp'}
+            src={'/images/banners/paisaje_1.jpeg'}
             alt="Login banner, wedding"
             layout="fill"
             objectFit="cover"
@@ -24,7 +24,7 @@ const LoginPage: FC = () => {
               width: '100%',
               height: '100%',
               margin: 0,
-              opacity: 0.7,
+              opacity: 0,
               backgroundColor: 'secondary.dark',
             }}
           />

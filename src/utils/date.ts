@@ -9,17 +9,20 @@ export const getWeddingDate = (): Date => {
 }
 
 export const formatDate = (date: Date): string => {
-    // Get the day with the appropriate ordinal suffix
+    // In Spanish format we use cardinal numbers without suffix
     const day = date.getDate();
-    const dayWithSuffix = day + getOrdinalSuffix(day);
-
-    const formattedDate = date.toLocaleString('en-US', {
+    
+    const month = date.toLocaleString('es-ES', {
         month: 'long',
     });
 
-    return `${formattedDate} ${dayWithSuffix}, ${date.getFullYear()}`;
+    const year = date.getFullYear();
+
+    // Spanish format: day de month de year (e.g., "12 de abril de 2023")
+    return `${day} de ${month} de ${year}`;
 }
 
+// This function is no longer needed for Spanish formatting
 const getOrdinalSuffix = (day: number): string => {
     if (day > 3 && day < 21) return 'th'; // Covers 11th to 19th
     switch (day % 10) {

@@ -1,5 +1,4 @@
 import React, { FC, useEffect } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { StyledButton } from '@/components/styled-button'
@@ -30,7 +29,7 @@ const HomeHero: FC = () => {
       <Box sx={{ position: 'relative', height: '90vh', overflow: 'hidden' }}>
         <Box sx={{ minHeight: { xs: 213, md: 355 }, opacity: 0.9 }}>
           <Image
-            src={'/images/banners/home-hero.webp'}
+            src={'/images/banners/paisaje_1.jpeg'}
             alt="Home page banner, wedding"
             layout="fill"
             objectFit="cover"
@@ -45,7 +44,7 @@ const HomeHero: FC = () => {
               width: '100%',
               height: '100%',
               margin: 0,
-              opacity: 0.7,
+              opacity: 0,
               backgroundColor: 'secondary.dark',
             }}
           />
@@ -61,8 +60,8 @@ const HomeHero: FC = () => {
             alignItems: 'center',
           }}
         >
-          <Typography variant="h4" textAlign="center" sx={{ color: 'primary.contrastText', pb: 2 }}>
-            We&apos;re Getting Married!
+          <Typography variant="h2" textAlign="center" sx={{ color: 'primary.contrastText', pb: 2 }}>
+          ¡Nos casamos!
           </Typography>
           <Typography
             variant="h1"
@@ -88,17 +87,8 @@ const HomeHero: FC = () => {
                 data-fillout-embed-type="popup"
                 data-fillout-inherit-parameters
               >
-                RSVP
+                CONFIRMA TU ASISTENCIA
               </StyledButton>
-            </Box>
-            <Box sx={{ mb: 4 }}>
-              <Link href="gifts" passHref legacyBehavior>
-                <a>
-                  <StyledButton color="primary" size="large">
-                    Register for a Gift
-                  </StyledButton>
-                </a>
-              </Link>
             </Box>
           </Box>
         </Container>
