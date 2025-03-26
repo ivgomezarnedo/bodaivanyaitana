@@ -57,7 +57,7 @@ const CustomCountdown: FC = () => {
             color="primary.dark"
             sx={{ width: { xs: 75, sm: 90, md: 100 } }}
           >
-            Days
+            Días
           </Typography>
           <Typography
             variant={matchMobileView ? 'h5' : 'h4'}
@@ -65,7 +65,7 @@ const CustomCountdown: FC = () => {
             color="primary.dark"
             sx={{ width: { xs: 75, sm: 90, md: 100 } }}
           >
-            Hours
+            Horas
           </Typography>
           <Typography
             variant={matchMobileView ? 'h5' : 'h4'}
@@ -73,7 +73,7 @@ const CustomCountdown: FC = () => {
             color="primary.dark"
             sx={{ width: { xs: 75, sm: 90, md: 100 } }}
           >
-            Minutes
+            Minutos
           </Typography>
           <Typography
             variant={matchMobileView ? 'h5' : 'h4'}
@@ -81,7 +81,7 @@ const CustomCountdown: FC = () => {
             color="primary.dark"
             sx={{ width: { xs: 75, sm: 90, md: 100 } }}
           >
-            Seconds
+            Segundos
           </Typography>
         </Box>
       </>

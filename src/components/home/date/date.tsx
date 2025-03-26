@@ -25,7 +25,7 @@ const HomeCountdown: FC = () => {
           }}
         >
           <Typography variant="h2" color="primary" align="center" sx={{ mb: 1, fontSize: { md: '32px' } }}>
-            When is the wedding?
+          ¿Cuándo es la boda?
           </Typography>
           <Typography variant="h3" color="primary.dark" align="center" sx={{ mb: 1 }}>
             {formatDate(getWeddingDate())}
