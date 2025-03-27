@@ -26,10 +26,10 @@ const HomeHero: FC = () => {
 
   return (
     <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', overflow: 'hidden' }}>
-      <Box sx={{ position: 'relative', height: '90vh', overflow: 'hidden' }}>
-        <Box sx={{ minHeight: { xs: 213, md: 355 }, opacity: 0.9 }}>
+      <Box sx={{ position: 'relative', height: '70vh', overflow: 'hidden' }}>
+        <Box sx={{ minHeight: { xs: 150, md: 250 }, opacity: 0.9 }}>
           <Image
-            src={'/images/banners/paisaje_1.jpeg'}
+            src={'/images/banners/paisaje_1.jpg'}
             alt="Home page banner, wedding"
             layout="fill"
             objectFit="cover"
@@ -53,7 +53,7 @@ const HomeHero: FC = () => {
           maxWidth="lg"
           sx={{
             position: 'relative',
-            top: matchTabletView ? -150 : -300,
+            top: matchTabletView ? -100 : -200,
             zIndex: 1,
             display: 'flex',
             flexDirection: 'column',
@@ -78,7 +78,7 @@ const HomeHero: FC = () => {
           <Typography variant="h2" textAlign="center" sx={{ color: 'primary.contrastText', pb: 2 }}>
             {formatDate(getWeddingDate())}
           </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 10 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 5 }}>
             <Box sx={{ position: 'relative', top: -50, zIndex: 1 }}>
               <StyledButton
                 color="dark"

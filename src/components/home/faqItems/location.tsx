@@ -14,7 +14,7 @@ const FAQLocation: FC = () => {
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 3,
-        backgroundColor: theme.palette.secondary.dark,
+        backgroundColor: theme.palette.primary.dark,
         maxWidth: 412,
         mx: 'auto',
       }}
@@ -25,13 +25,13 @@ const FAQLocation: FC = () => {
         rel="noopener noreferrer"
         href={weddingConfig.location.link}
       >
-        <Typography variant="h3" align="center" color="secondary.contrastText" sx={{ my: 1 }}>
-          Where is it happening?
+        <Typography variant="h3" align="center" color="primary.contrastText" sx={{ my: 1 }}>
+          ¿Dónde es la boda?
         </Typography>
-        <Typography variant="body1" align="center" color="secondary.contrastText">
+        <Typography variant="body1" align="center" color="primary.contrastText" sx={{ fontWeight: 'bold' }}>
           {weddingConfig.location.title}
         </Typography>
-        <Typography variant="body1" align="center" color="secondary.contrastText" sx={{ mb: 1 }}>
+        <Typography variant="body1" align="center" color="primary.contrastText" sx={{ mb: 1 }}>
           {weddingConfig.location.address}
         </Typography>
         <Box sx={{ borderRadius: 5, overflow: 'hidden', cursor: 'pointer' }}>
