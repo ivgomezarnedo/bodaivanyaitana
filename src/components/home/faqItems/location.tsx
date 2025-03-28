@@ -35,7 +35,7 @@ const FAQLocation: FC = () => {
         <Box sx={{ borderRadius: 5, overflow: 'hidden', cursor: 'pointer', display: 'flex', justifyContent: 'center', width: '100%' }}>
           <Image
             alt={`Map of ${weddingConfig.location.title}`}
-            src={`https://maps.googleapis.com/maps/api/staticmap?center=${weddingConfig.location.latLng}&zoom=15&size=500x600&markers=${weddingConfig.location.latLng}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
+            src={`https://maps.googleapis.com/maps/api/staticmap?center=${weddingConfig.location.latLng}&zoom=15&size=500x700&markers=${weddingConfig.location.latLng}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
             width={350}
             height={530}
             style={{ objectFit: 'contain' }}
