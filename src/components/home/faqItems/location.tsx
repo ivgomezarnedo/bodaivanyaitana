@@ -15,31 +15,30 @@ const FAQLocation: FC = () => {
         justifyContent: 'center',
         borderRadius: 3,
         backgroundColor: theme.palette.primary.dark,
-        maxWidth: 412,
+        maxWidth: 500,
         mx: 'auto',
+        my: 3,
       }}
     >
       <CardActionArea
-        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', p: 1 }}
+        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', p: 3 }}
         target="_blank"
         rel="noopener noreferrer"
         href={weddingConfig.location.link}
       >
-        <Typography variant="h3" align="center" color="primary.contrastText" sx={{ my: 1 }}>
+        <Typography variant="h1" align="center" color="primary.contrastText" sx={{ my: 1 }}>
           ¿Dónde es la boda?
         </Typography>
-        <Typography variant="body1" align="center" color="primary.contrastText" sx={{ fontWeight: 'bold' }}>
+        <Typography variant="h4" align="center" color="primary.contrastText" sx={{ fontWeight: 'bold' }}>
           {weddingConfig.location.title}
         </Typography>
-        <Typography variant="body1" align="center" color="primary.contrastText" sx={{ mb: 1 }}>
-          {weddingConfig.location.address}
-        </Typography>
-        <Box sx={{ borderRadius: 5, overflow: 'hidden', cursor: 'pointer' }}>
+        <Box sx={{ borderRadius: 5, overflow: 'hidden', cursor: 'pointer', display: 'flex', justifyContent: 'center', width: '100%' }}>
           <Image
             alt={`Map of ${weddingConfig.location.title}`}
-            src={`https://maps.googleapis.com/maps/api/staticmap?center=${weddingConfig.location.latLng}&zoom=13&size=400x400&markers=${weddingConfig.location.latLng}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
-            width={300}
-            height={300}
+            src={`https://maps.googleapis.com/maps/api/staticmap?center=${weddingConfig.location.latLng}&zoom=15&size=500x600&markers=${weddingConfig.location.latLng}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
+            width={350}
+            height={530}
+            style={{ objectFit: 'contain' }}
           />
         </Box>
       </CardActionArea>

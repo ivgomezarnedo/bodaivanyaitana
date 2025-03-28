@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import { Element as ScrollElement } from 'react-scroll'
 import { Container, Divider, Grid, Typography, Box } from '@mui/material'
 import { DressCode, Location } from './faqItems'
-import { HomeLaurel } from '../laurel'
 
 const HomeFAQ: FC = () => {
   return (
@@ -24,13 +23,11 @@ const HomeFAQ: FC = () => {
         >
           <Grid item xs={2} sm={6} md={6} key="faq-location">
             <>
-              <HomeLaurel />
               <Location />
             </>
           </Grid>
           <Grid item xs={2} sm={6} md={6} key="faq-dress-code">
             <>
-              <HomeLaurel />
               <DressCode />
             </>
           </Grid>

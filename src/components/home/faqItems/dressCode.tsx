@@ -13,28 +13,24 @@ const FAQDressCode: FC = () => {
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 3,
-        backgroundColor: theme.palette.secondary.dark,
-        maxWidth: 412,
+        backgroundColor: theme.palette.primary.dark,
+        maxWidth: 500,
         mx: 'auto',
+        my: 3,
       }}
     >
       <CardActionArea
-        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', p: 1 }}
+        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', p: 3 }}
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.annabellaw.com/post/what-to-wear-to-a-wedding#:~:text=Black%2DTie%20Optional%20Dress%20Code"
       >
-        <Typography variant="h3" align="center" color="secondary.contrastText" sx={{ my: 1 }}>
-          What is the dress code?
+        <Typography variant="h2" align="center" color="primary.contrastText" sx={{ my: 1 }}>
+          ¿Cuáles son los horarios de los autobuses?
         </Typography>
-        <Typography variant="body1" align="center" color="secondary.contrastText">
-          Formal or Cocktail
-        </Typography>
-        <Typography variant="body1" align="center" color="secondary.contrastText" sx={{ mb: 1 }}>
-          The wedding will be held entirely indoors
-        </Typography>
-        <Box sx={{ borderRadius: 5, overflow: 'hidden', cursor: 'pointer' }}>
-          <Image alt="Dress code" src="/images/home/attire.png" width={300} height={300} />
+
+        <Box sx={{ borderRadius: 5, overflow: 'hidden', cursor: 'pointer', display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <Image alt="Dress code" src="/images/home/ivan_y_aitana_bus_combined_2.png" width={350} height={530} style={{ objectFit: 'contain' }} />
         </Box>
       </CardActionArea>
     </Card>
