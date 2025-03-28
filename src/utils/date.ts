@@ -17,9 +17,9 @@ export const formatDate = (date: Date): string => {
     });
 
     const year = date.getFullYear();
-
+    const time = date.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
     // Spanish format: day de month de year (e.g., "12 de abril de 2023")
-    return `${day} de ${month} de ${year}`;
+    return `${day} de ${month} de ${year} a las ${time}`;
 }
 
 // This function is no longer needed for Spanish formatting

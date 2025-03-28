@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Element as ScrollElement } from 'react-scroll'
 import { Container, Divider, Grid, Typography, Box } from '@mui/material'
-import { DressCode, Location } from './faqItems'
+import { DressCode, Location, DetailedInfo } from './faqItems'
 
 const HomeFAQ: FC = () => {
   return (
@@ -29,6 +29,11 @@ const HomeFAQ: FC = () => {
           <Grid item xs={2} sm={6} md={6} key="faq-dress-code">
             <>
               <DressCode />
+            </>
+          </Grid>
+          <Grid item xs={2} sm={12} md={12} key="faq-detailed-info">
+            <>
+              <DetailedInfo />
             </>
           </Grid>
         </Grid>
