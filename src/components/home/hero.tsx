@@ -14,7 +14,7 @@ const HomeHero: FC = () => {
 
   useEffect(() => {
     const script = document.createElement('script')
-    script.src = 'https://server.fillout.com/embed/v1/'
+    script.src = 'https://server.fillout.com/embed/v1/' //TODO: Add regex with codes to form.
     script.async = true
 
     document.body.appendChild(script)
