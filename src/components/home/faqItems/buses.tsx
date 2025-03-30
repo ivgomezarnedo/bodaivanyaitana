@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Card, CardActionArea, Box, Typography } from '@mui/material'
 import theme from '@/config/theme'
 
-const FAQDressCode: FC = () => {
+const FAQBuses: FC = () => {
   return (
     <Card
       elevation={4}
@@ -55,4 +55,4 @@ const FAQDressCode: FC = () => {
   )
 }
 
-export default FAQDressCode
+export default FAQBuses

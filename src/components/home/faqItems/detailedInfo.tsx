@@ -31,11 +31,19 @@ const DetailedInfo: FC = () => {
             ¿Hay código de vestimenta?
           </Typography>
           <Typography variant="body1" align="left" color="primary.contrastText" sx={{ fontSize: '1.3rem', lineHeight: 1.6 }}>
-            No, no somos quien para decirle a los invitados cómo deben vestirse. 
-            La finca tiene preciosos jardines, por lo que gran parte del día se celebrará al aire libre.
+            No, no somos quien para decirle a los invitados cómo deben vestirse. <br />
+            Se recomienda llevar calcetines si quieres montarte en los hinchables.
           </Typography>
         </Box>
-
+        <Box>
+          <Typography variant="h3" align="left" color="primary.contrastText" sx={{ mb: 2, fontWeight: 'bold' }}>
+            ¿Es buena idea llevar tacones de aguja?
+          </Typography>
+          <Typography variant="body1" align="left" color="primary.contrastText" sx={{ fontSize: '1.3rem', lineHeight: 1.6 }}>
+            La finca tiene preciosos jardines en los que se celebrará gran parte del día. <br />
+            Se ofrecerán tapones para que puedas caminar por los jardines, pero se recomienda llevar zapatos cómodos.
+          </Typography>
+        </Box>
         <Box>
           <Typography variant="h3" align="left" color="primary.contrastText" sx={{ mb: 2, fontWeight: 'bold' }}>
             ¿Habrá estacionamiento disponible?
