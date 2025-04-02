@@ -76,7 +76,7 @@ const HomeHero: FC = () => {
             {weddingConfig.people.groom.firstName} & {weddingConfig.people.bride.firstName}
           </Typography>
           <Typography variant="h2" textAlign="center" sx={{ color: 'primary.contrastText', pb: 2 }}>
-            {formatDate(getWeddingDate())}
+            {/*{formatDate(getWeddingDate())}*/}
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 5 }}>
             <Box sx={{ position: 'relative', top: -50, zIndex: 1 }}>
