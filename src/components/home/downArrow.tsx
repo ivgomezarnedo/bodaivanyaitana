@@ -2,11 +2,19 @@ import React from 'react'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { scroller } from 'react-scroll'
 
-const CustomExpandMoreIcon: React.FC = () => (
+interface CustomExpandMoreIconProps {
+  targetSection?: string;
+  isDark?: boolean;
+}
+
+const CustomExpandMoreIcon: React.FC<CustomExpandMoreIconProps> = ({ 
+  targetSection = 'home-countdown',
+  isDark = false
+}) => (
   <ExpandMoreIcon
     onClick={() => {
       // Scroll to the next section
-      scroller.scrollTo('faq', {
+      scroller.scrollTo(targetSection, {
         duration: 800,
         smooth: 'easeInOutQuad',
         offset: 0,
@@ -22,7 +30,7 @@ const CustomExpandMoreIcon: React.FC = () => (
       lineHeight: '60px',
       left: '50%',
       bottom: 10,
-      color: '#FFF',
+      color: isDark ? 'primary.main' : '#FFF',
       textAlign: 'center',
       fontSize: 80,
       textDecoration: 'none',

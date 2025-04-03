@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material'
 import { Divider } from '@mui/material'
 import { formatDate, getWeddingDate } from '@/utils/date'
 import CustomCountdown from './countdown'
+import { CustomExpandMoreIcon } from '..'
 
 const HomeCountdown: FC = () => {
   return (

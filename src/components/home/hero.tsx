@@ -93,7 +93,7 @@ const HomeHero: FC = () => {
           </Box>
         </Container>
       </Box>
-      <CustomExpandMoreIcon />
+      <CustomExpandMoreIcon targetSection="home-countdown" />
     </Box>
   )
 }
