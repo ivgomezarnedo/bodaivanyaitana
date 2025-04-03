@@ -17,29 +17,42 @@ const HomeFAQ: FC = () => {
       <Typography variant="h2" color="primary" align="center" sx={{ mb: 2, fontSize: { md: '32px' } }}>
         FAQ
       </Typography>
-      <Container maxWidth="lg" sx={{ width: '100%', mx: 'auto' }}>
+      <Container maxWidth="lg" sx={{ width: '100%', mx: 'auto', px: { xs: 2, sm: 3 } }}>
         <Grid
           container
-          sx={{ justifyContent: 'center', alignItems: 'center' }}
-          spacing={{ xs: 4, md: 3 }}
-          columns={{ xs: 2, sm: 2, md: 12 }}
-          rowSpacing={6}
+          sx={{ 
+            justifyContent: 'center', 
+            alignItems: 'center'
+          }}
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 1, sm: 2, md: 12 }}
+          rowSpacing={{ xs: 4, sm: 6 }}
         >
-          <Grid item xs={2} sm={6} md={6} key="faq-location">
-            <>
-              <Location />
-              {/* Mobile-only down arrow from location to dress code */}
-              {isXsScreen && (
-                <Box sx={{ position: 'relative', height: '60px', mt: 2 }}>
-                  <CustomExpandMoreIcon 
-                    targetSection="faq-dress-code" 
-                    isDark={true} 
-                  />
-                </Box>
-              )}
-            </>
+          <Grid item xs={1} sm={1} md={6} key="faq-location" sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <Location />
           </Grid>
-          <Grid item xs={2} sm={6} md={6} key="faq-dress-code">
+          
+          {/* Mobile-only down arrow from location to dress code */}
+          {isXsScreen && (
+            <Grid item xs={1} key="faq-mobile-arrow-1" 
+              sx={{ 
+                textAlign: 'center', 
+                position: 'relative',
+                height: '60px',
+                mt: { xs: -2 },
+                mb: { xs: -2 }
+              }}
+            >
+              <Box sx={{ position: 'relative', height: '100%' }}>
+                <CustomExpandMoreIcon 
+                  targetSection="faq-dress-code" 
+                  isDark={true} 
+                />
+              </Box>
+            </Grid>
+          )}
+          
+          <Grid item xs={1} sm={1} md={6} key="faq-dress-code" sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <>
               <ScrollElement name="faq-dress-code" />
               <DressCode />
@@ -47,7 +60,7 @@ const HomeFAQ: FC = () => {
           </Grid>
           
           {/* Down Arrow after the first row */}
-          <Grid item xs={2} sm={12} md={12} key="faq-down-arrow" 
+          <Grid item xs={1} sm={2} md={12} key="faq-down-arrow" 
             sx={{ 
               textAlign: 'center', 
               position: 'relative',
@@ -63,7 +76,7 @@ const HomeFAQ: FC = () => {
             </Box>
           </Grid>
           
-          <Grid item xs={2} sm={12} md={12} key="faq-special-gift">
+          <Grid item xs={1} sm={2} md={12} key="faq-special-gift" sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <>
               <ScrollElement name="faq-special-gift" />
               <SpecialGift />
@@ -71,7 +84,7 @@ const HomeFAQ: FC = () => {
           </Grid>
           
           {/* Down Arrow from special gift to detailed info */}
-          <Grid item xs={2} sm={12} md={12} key="faq-down-arrow-2" 
+          <Grid item xs={1} sm={2} md={12} key="faq-down-arrow-2" 
             sx={{ 
               textAlign: 'center', 
               position: 'relative',
@@ -87,7 +100,7 @@ const HomeFAQ: FC = () => {
             </Box>
           </Grid>
           
-          <Grid item xs={2} sm={12} md={12} key="faq-detailed-info">
+          <Grid item xs={1} sm={2} md={12} key="faq-detailed-info" sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <>
               <ScrollElement name="faq-detailed-info" />
               <DetailedInfo />

@@ -1,9 +1,12 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
-import { Card, CardActionArea, Box, Typography } from '@mui/material'
+import { Card, CardActionArea, Box, Typography, useTheme, useMediaQuery } from '@mui/material'
 import theme from '@/config/theme'
 
 const FAQBuses: FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  
   return (
     <Card
       elevation={4}
@@ -14,8 +17,8 @@ const FAQBuses: FC = () => {
         justifyContent: 'center',
         borderRadius: 3,
         backgroundColor: theme.palette.primary.dark,
-        width: 500,
-        height: 700,
+        width: { xs: '100%', sm: 500 },
+        height: { xs: 600, sm: 700 },
         mx: 'auto',
         my: 3,
         overflow: 'hidden',
@@ -48,7 +51,13 @@ const FAQBuses: FC = () => {
           width: '100%',
           flex: 1
         }}>
-          <Image alt="Dress code" src="/images/home/ivan_y_aitana_bus_combined_2.png" width={350} height={500} style={{ objectFit: 'contain' }} />
+          <Image 
+            alt="Dress code" 
+            src="/images/home/ivan_y_aitana_bus_combined_2.png" 
+            width={isMobile ? 280 : 350} 
+            height={isMobile ? 450 : 500} 
+            style={{ objectFit: 'contain' }} 
+          />
         </Box>
       </CardActionArea>
     </Card>

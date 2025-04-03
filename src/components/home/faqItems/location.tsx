@@ -1,10 +1,13 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
-import { Card, CardActionArea, Typography, Box } from '@mui/material'
+import { Card, CardActionArea, Typography, Box, useTheme, useMediaQuery } from '@mui/material'
 import theme from '@/config/theme'
 import weddingConfig from '@/config/wedding.config'
 
 const FAQLocation: FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  
   return (
     <Card
       elevation={4}
@@ -15,8 +18,8 @@ const FAQLocation: FC = () => {
         justifyContent: 'center',
         borderRadius: 3,
         backgroundColor: theme.palette.primary.dark,
-        width: 500,
-        height: 700,
+        width: { xs: '100%', sm: 500 },
+        height: { xs: 600, sm: 700 },
         mx: 'auto',
         my: 3,
         overflow: 'hidden',
@@ -54,8 +57,8 @@ const FAQLocation: FC = () => {
           <Image
             alt={`Map of ${weddingConfig.location.title}`}
             src={`https://maps.googleapis.com/maps/api/staticmap?center=${weddingConfig.location.latLng}&zoom=15&size=500x700&markers=${weddingConfig.location.latLng}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
-            width={350}
-            height={550}
+            width={isMobile ? 280 : 350}
+            height={isMobile ? 450 : 550}
             style={{ objectFit: 'contain' }}
           />
         </Box>
