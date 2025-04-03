@@ -3,6 +3,7 @@ import Countdown, { CountdownRenderProps } from 'react-countdown'
 import { Box, Typography } from '@mui/material'
 import { useMediaQuery, useTheme } from '@mui/material'
 import { getWeddingDate } from '@/utils/date'
+import { CustomExpandMoreIcon } from '..'
 
 const CustomCountdown: FC = () => {
   const { breakpoints } = useTheme()
@@ -12,7 +13,7 @@ const CustomCountdown: FC = () => {
     const { days, hours, minutes, seconds, completed } = props
 
     if (completed) {
-      return <Typography variant="h1">Its the big day!</Typography>
+      return <Typography variant="h1">El gran día!</Typography>
     }
     return (
       <>
@@ -82,7 +83,7 @@ const CustomCountdown: FC = () => {
             sx={{ width: { xs: 75, sm: 90, md: 100 } }}
           >
             Segundos
-          </Typography>
+          </Typography>      
         </Box>
       </>
     )

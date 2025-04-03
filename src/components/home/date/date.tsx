@@ -32,6 +32,7 @@ const HomeCountdown: FC = () => {
             {formatDate(getWeddingDate())}
           </Typography>
           <CustomCountdown />
+
         </Box>
       </Box>
       <Divider sx={{ width: '50%', mx: 'auto', mt: 3 }} />
