@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Element as ScrollElement } from 'react-scroll'
 import { Container, Divider, Grid, Typography, Box, useMediaQuery, useTheme } from '@mui/material'
-import { DressCode, Location, DetailedInfo, SpecialGift } from './faqItems'
+import { FAQBuses, Location, DetailedInfo, SpecialGift } from './faqItems'
 import { CustomExpandMoreIcon } from '.'
 
 const HomeFAQ: FC = () => {
@@ -45,17 +45,17 @@ const HomeFAQ: FC = () => {
             >
               <Box sx={{ position: 'relative', height: '100%' }}>
                 <CustomExpandMoreIcon 
-                  targetSection="faq-dress-code" 
+                  targetSection="faq-buses" 
                   isDark={true} 
                 />
               </Box>
             </Grid>
           )}
           
-          <Grid item xs={1} sm={1} md={6} key="faq-dress-code" sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+          <Grid item xs={1} sm={1} md={6} key="faq-buses" sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <>
-              <ScrollElement name="faq-dress-code" />
-              <DressCode />
+              <ScrollElement name="faq-buses" />
+              <FAQBuses />
             </>
           </Grid>
           

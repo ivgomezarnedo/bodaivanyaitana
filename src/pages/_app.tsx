@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
 import type { AppContext, AppInitialProps, AppProps } from 'next/app'
@@ -8,8 +8,6 @@ import 'slick-carousel/slick/slick.css'
 import '@/styles/globals.css'
 import '@/styles/react-slick.css'
 import { Splash } from '@/components/splash'
-import { userHasPrevLogin } from '@/utils/password'
-import { LoginPage } from '@/components/login'
 import weddingConfig from '@/config/wedding.config'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -17,13 +15,6 @@ type CustomAppProps = {}
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export function MyCustomApp({ Component, pageProps }: AppProps & CustomAppProps) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-
-  useEffect(() => {
-    const hasPrevLogin = userHasPrevLogin()
-    setIsLoggedIn(hasPrevLogin)
-  }, [])
-
   return (
     <>
       <Head>
@@ -37,17 +28,10 @@ export function MyCustomApp({ Component, pageProps }: AppProps & CustomAppProps)
       </Head>
       <MUIProvider>
         <CssBaseline />
-        {isLoggedIn ? (
-          <>
-            <Splash timeout={200} />
-            <Component {...pageProps} />
-          </>
-        ) : (
-          <>
-            <Splash timeout={200} />
-            <LoginPage />
-          </>
-        )}
+        <>
+          <Splash timeout={200} />
+          <Component {...pageProps} />
+        </>
       </MUIProvider>
     </>
   )

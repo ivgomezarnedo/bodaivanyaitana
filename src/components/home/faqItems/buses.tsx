@@ -52,7 +52,7 @@ const FAQBuses: FC = () => {
           flex: 1
         }}>
           <Image 
-            alt="Dress code" 
+            alt="Buses" 
             src="/images/home/ivan_y_aitana_bus_combined_2.png" 
             width={isMobile ? 280 : 350} 
             height={isMobile ? 450 : 500} 
