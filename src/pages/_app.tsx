@@ -33,7 +33,7 @@ export function MyCustomApp({ Component, pageProps }: AppProps & CustomAppProps)
           name="description"
           content={`We're happy to invite you to ${weddingConfig.people.bride.firstName} and ${weddingConfig.people.groom.firstName}'s wedding.`}
         />
-        <title>{weddingConfig.date.date}</title>
+        <title>Iván & Aitana</title>
       </Head>
       <MUIProvider>
         <CssBaseline />

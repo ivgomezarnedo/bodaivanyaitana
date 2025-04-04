@@ -51,7 +51,7 @@ const Login: FC = () => {
           fontFamily: '"Dancing Script", cursive;',
         }}
       >
-        {weddingConfig.people.groom.firstName} & {weddingConfig.people.bride.firstName}
+        Iván & Aitana
       </Typography>
       <Typography variant="h2" textAlign="center" sx={{ color: 'primary.contrastText', pb: 2 }}>
         Please Login Below
