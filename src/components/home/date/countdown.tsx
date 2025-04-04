@@ -8,14 +8,19 @@ const CustomCountdown: FC = () => {
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('sm'))
 
-  const renderer = (props: CountdownRenderProps): React.ReactNode => {
+  const renderer = (props: CountdownRenderProps): JSX.Element => {
     const { days, hours, minutes, seconds, completed } = props
 
     if (completed) {
-      return <Typography variant="h1">El gran día!</Typography>
+      return (
+        <div>
+          <Typography variant="h1">El gran día!</Typography>
+        </div>
+      )
     }
+    
     return (
-      <>
+      <React.Fragment>
         <Box sx={{ display: 'flex', mx: 'auto' }}>
           <Typography
             variant={matchMobileView ? 'h3' : 'h1'}
@@ -84,7 +89,7 @@ const CustomCountdown: FC = () => {
             Segundos
           </Typography>      
         </Box>
-      </>
+      </React.Fragment>
     )
   }
 
