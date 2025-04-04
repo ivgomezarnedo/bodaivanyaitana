@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
 import { Card, CardActionArea, Typography, Box, useTheme, useMediaQuery } from '@mui/material'
-import theme from '@/config/theme'
 import weddingConfig from '@/config/wedding.config'
 
 const FAQLocation: FC = () => {

@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
 import { Card, CardActionArea, Box, Typography, useTheme, useMediaQuery } from '@mui/material'
-import theme from '@/config/theme'
 
 const FAQBuses: FC = () => {
   const theme = useTheme();

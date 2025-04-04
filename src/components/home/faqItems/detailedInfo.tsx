@@ -1,10 +1,8 @@
 import React, { FC } from 'react'
-import { Card, Box, Typography, useTheme, useMediaQuery } from '@mui/material'
+import { Card, Box, Typography} from '@mui/material'
 import theme from '@/config/theme'
 
 const DetailedInfo: FC = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   
   return (
     <Card

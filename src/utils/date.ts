@@ -21,14 +21,3 @@ export const formatDate = (date: Date): string => {
     // Spanish format: day de month de year (e.g., "12 de abril de 2023")
     return `${day} de ${month} de ${year} a las ${time}`;
 }
-
-// This function is no longer needed for Spanish formatting
-const getOrdinalSuffix = (day: number): string => {
-    if (day > 3 && day < 21) return 'th'; // Covers 11th to 19th
-    switch (day % 10) {
-        case 1: return 'st';
-        case 2: return 'nd';
-        case 3: return 'rd';
-        default: return 'th';
-    }
-}

@@ -35,7 +35,23 @@ const HomeCountdown: FC = () => {
 
         </Box>
       </Box>
-      <Divider sx={{ width: '50%', mx: 'auto', mt: 3 }} />
+      
+      {/* Down arrow to FAQ section */}
+      <Box sx={{ 
+        position: 'relative', 
+        height: '80px',
+        mt: 4,
+        mb: 2,
+        display: 'flex',
+        justifyContent: 'center'
+      }}>
+        <CustomExpandMoreIcon 
+          targetSection="faq" 
+          isDark={true} 
+        />
+      </Box>
+      
+      <Divider sx={{ width: '50%', mx: 'auto', mt: 0 }} />
     </Box>
   )
 }

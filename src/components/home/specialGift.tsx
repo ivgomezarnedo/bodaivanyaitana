@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
-import { Card, CardActionArea, Box, Typography, Container, Grid, useTheme, useMediaQuery } from '@mui/material'
-import theme from '@/config/theme'
+import { Card, CardActionArea, Box, Container, Grid, useTheme, useMediaQuery } from '@mui/material'
 
 const HomeSpecialGift: FC = () => {
   const theme = useTheme();

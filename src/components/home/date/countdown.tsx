@@ -3,7 +3,6 @@ import Countdown, { CountdownRenderProps } from 'react-countdown'
 import { Box, Typography } from '@mui/material'
 import { useMediaQuery, useTheme } from '@mui/material'
 import { getWeddingDate } from '@/utils/date'
-import { CustomExpandMoreIcon } from '..'
 
 const CustomCountdown: FC = () => {
   const { breakpoints } = useTheme()

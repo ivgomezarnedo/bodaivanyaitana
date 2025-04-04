@@ -3,28 +3,24 @@ import Image from 'next/image'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { StyledButton } from '@/components/styled-button'
 import { useTheme } from '@mui/material/styles'
-import { CustomExpandMoreIcon } from '.'
 import { Box, Container, Typography, Modal, Button, Stack, Snackbar, Alert } from '@mui/material'
 import weddingConfig from '@/config/wedding.config'
-import { formatDate, getWeddingDate } from '@/utils/date'
 
 const HomeHero: FC = () => {
   const { breakpoints } = useTheme()
   const matchTabletView = useMediaQuery(breakpoints.down('md'))
   const [open, setOpen] = useState(false)
   const [errorOpen, setErrorOpen] = useState(false)
-  const driveFolder = '1vnz768R8YekMWI91W3kKLTV44Tt6ujXH'
-  const driveFolderUploadUrl = `https://drive.google.com/drive/folders/${driveFolder}?usp=sharing`
+  //const driveFolder = '1vnz768R8YekMWI91W3kKLTV44Tt6ujXH'
 
-  const handleOpen = () => setOpen(true)
-  const handleClose = () => setOpen(false)
+  const handleClose = (): void => setOpen(false)
   
-  const handleUpload = () => {
+  const handleUpload = (): void => {
     // Show error message instead of opening the folder
     setErrorOpen(true)
   }
   
-  const handleErrorClose = () => {
+  const handleErrorClose = (): void => {
     setErrorOpen(false)
   }
 
@@ -76,7 +72,7 @@ const HomeHero: FC = () => {
             alignItems: 'center',
           }}
         >
-          <Typography variant="h2" textAlign="center" sx={{ color: 'primary.contrastText', pb: 2 }}>
+          <Typography variant="h2" textAlign="center"  sx={{ color: 'primary.contrastText', pb: 2, fontFamily: '"Bely Display", serif', fontSize: { md: 54, sm: 40, xs: 30 },}}>
           ¡Nos casamos!
           </Typography>
           <Typography
@@ -86,10 +82,10 @@ const HomeHero: FC = () => {
               color: 'primary.contrastText',
               pb: 2,
               fontSize: { md: 112, sm: 72, xs: 54 },
-              fontFamily: '"Dancing Script", cursive;',
+              fontFamily: '"Bely Display", serif',
             }}
           >
-            Iván & Aitana
+            {weddingConfig.people.groom.firstName} & {weddingConfig.people.bride.firstName}
           </Typography>
           <Typography variant="h2" textAlign="center" sx={{ color: 'primary.contrastText', pb: 2 }}>
             {/*{formatDate(getWeddingDate())}*/}
@@ -116,7 +112,7 @@ const HomeHero: FC = () => {
           zIndex: 1 
         }}>
           <StyledButton
-            color="dark"
+            color="primary"
             size="large"
             onClick={handleUpload}
           >
