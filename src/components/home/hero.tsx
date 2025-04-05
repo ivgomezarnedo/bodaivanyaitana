@@ -91,7 +91,11 @@ const HomeHero: FC = () => {
             {/*{formatDate(getWeddingDate())}*/}
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2 }}>
-            <Box sx={{ position: 'relative', top: -50, zIndex: 1 }}>
+            <Box sx={{ 
+              position: 'relative', 
+              top: { xs: -40, sm: -60, md: -80 },
+              zIndex: 1 
+            }}>
               <StyledButton
                 color="dark"
                 size="xlarge"
