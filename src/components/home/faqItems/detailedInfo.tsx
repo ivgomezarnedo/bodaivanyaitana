@@ -62,6 +62,23 @@ const DetailedInfo: FC = () => {
             ¯\_(ツ)_/¯
           </Typography>
         </Box>
+
+        <Box>
+          <Typography variant="h3" align="left" color="primary.contrastText" sx={{ mb: 2, fontWeight: 'bold', fontSize: { xs: '1.5rem', sm: '1.75rem' } }}>
+            ¿Se puede comprar tabaco en la finca?
+          </Typography>
+          <Typography variant="body1" align="left" color="primary.contrastText" sx={{ fontSize: { xs: '1.3rem', sm: '1.5rem' }, lineHeight: 1.6 }}>
+            No.
+          </Typography>
+        </Box>
+        <Box>
+          <Typography variant="h3" align="left" color="primary.contrastText" sx={{ mb: 2, fontWeight: 'bold', fontSize: { xs: '1.5rem', sm: '1.75rem' } }}>
+            ¿Se puede tirar confeti o petardos en la finca?
+          </Typography>
+          <Typography variant="body1" align="left" color="primary.contrastText" sx={{ fontSize: { xs: '1.3rem', sm: '1.5rem' }, lineHeight: 1.6 }}>
+            No, así lo indica el contrato. 
+          </Typography>
+        </Box>
       </Box>
     </Card>
   )
